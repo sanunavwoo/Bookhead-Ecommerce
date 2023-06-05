@@ -41,6 +41,7 @@
     background-color: rgba(26, 141, 135);
     color:rgb(248, 204, 81);
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .password-wrapper{

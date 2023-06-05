@@ -4,7 +4,7 @@ import { FilterContext } from "../../contexts/FilterContext";
 import "./categoryCard.css";
 
 export function CategoryCard(props){
-const {filterState, filterDispatch}= useContext(FilterContext);
+const {filterDispatch}= useContext(FilterContext);
 
     const navigate= useNavigate();
     function categoryCardHandler(catName){

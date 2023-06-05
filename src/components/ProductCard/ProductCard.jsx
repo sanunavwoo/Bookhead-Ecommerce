@@ -2,9 +2,9 @@ import "./ProductCard.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
-import { AuthContext } from "../../contexts/AuthContext";
+
 import { WishlistContext } from "../../contexts/WishlistContext";
-import { ToastContainer, toast } from 'react-toastify';
+
 
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
@@ -14,11 +14,11 @@ export function ProductCard(props){
     const {addToCartHandler,itemInCartFlag}= useContext(CartContext);
     const {AddToWishlistHandler,itemInWishlistFlag,removeProductFromWishlist}= useContext(WishlistContext);
    
-    console.log(props);
+    // console.log(props);
     const navigate= useNavigate();
 
     function clickHandler(id){
-        console.log("ID", id);
+        // console.log("ID", id);
         navigate(`/products/${id}`);
     }
 

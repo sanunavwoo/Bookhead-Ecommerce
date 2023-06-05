@@ -15,7 +15,7 @@ import { WishlistContext } from "../../contexts/WishlistContext";
 
 export function Navigation(props){
 
-    const {filterState,filterDispatch}= useContext(FilterContext);
+    const {filterDispatch}= useContext(FilterContext);
     const {stateAuth}= useContext(AuthContext);
     const {cartItems}= useContext(CartContext);
     const {wishlistItems}= useContext(WishlistContext);

@@ -27,6 +27,17 @@ export function AddressContextProvider({children}){
         zipCode:"S2002",
         mobile:"87518964"}])
 
+    const [addressFormData,setAddressFormData]= useState({
+            name:"",
+            street:"",
+            city:"",
+            state:"",
+            country:"",
+            zipCode:"",
+            mobile:"",
+            }
+        );    
+
 
     const getAddress= async ()=>{
         try{
@@ -72,9 +83,11 @@ export function AddressContextProvider({children}){
         }
       };
 
-      const deleteAddress= async (addressIdToBeDeleted)=>{
-        try{
-            const res= await axios(`/api/user/address/${addressIdToBeDeleted}`,{
+      const deleteAddress= async (addressIdToBeDeleted)=>
+      {
+        try{    
+            const res= await axios(`/api/user/address/${addressIdToBeDeleted}`,
+            {
                 method:'DELETE',
                 headers: {
                     authorization: stateAuth.token,
@@ -93,11 +106,15 @@ export function AddressContextProvider({children}){
         }
       }
 
+    //   const editAddressHandler=async ()=>{
+
+    //   }
+
     useEffect(()=>{
         getAddress();
     },[]);
     return(
-        <AddressContext.Provider value={{address,getAddress,addAddress,deleteAddress,userAddress,setUserAddress}} >
+        <AddressContext.Provider value={{address,getAddress,addAddress,deleteAddress,userAddress,setUserAddress,addressFormData,setAddressFormData}} >
             {children}
         </AddressContext.Provider>
     );

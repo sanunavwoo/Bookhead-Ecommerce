@@ -5,13 +5,30 @@
     grid-gap: 10rem;
     
 }
+.profile-page-container h1 {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 0.5rem;
+}
+.profile-card-container{
+    padding: 1rem;
+}
 .profile-card{
     display: flex;
     grid-gap: 1rem;
 }
+
+
+
 .address-card-container{
     width: 20rem;
-    
+    padding: 1rem;
+}
+
+.address-card-container h1 {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 0.5rem;
 }
 .address-card{
     border: 1px solid rgb(148, 145, 145);
@@ -30,7 +47,7 @@
 .profile-horizontal-btns{
     margin: 0.5rem 0rem;
 }
-.profile-horizontal-btns button{
+.profile-horizontal-btns .address-delete-btn{
     background: none;
     border: none;
     background-color: red;
@@ -38,4 +55,16 @@
 }
 .address-info{
     border-bottom: 0.5px solid rgb(75, 73, 73);
+}
+
+.add-address-btn{
+    width:80%;
+    background-color: rgba(26, 141, 135);
+    height: 2rem;
+    border:none;
+    border-radius: 2rem;
+    color: rgb(248, 204, 81);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }

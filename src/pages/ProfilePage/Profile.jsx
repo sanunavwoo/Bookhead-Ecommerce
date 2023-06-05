@@ -41,7 +41,7 @@ export function Profile(){
                         <div className="address-card-container">
                             <h1>My Address</h1>
                             {address?.length===0 ? 
-                                <h1>No address found</h1> 
+                                <h2>No address found</h2> 
                             :
                                 
                                     (address.map((currentAddress)=>
@@ -54,7 +54,8 @@ export function Profile(){
                                                 <p>{currentAddress.mobile}</p>
                                             </div>
                                             <div className="profile-horizontal-btns">
-                                                <button onClick={()=>deleteAddress(currentAddress._id)}>Delete</button>
+                                                <button className="address-delete-btn" onClick={()=>deleteAddress(currentAddress._id)}>Delete</button>
+                                                <button>Edit</button>
                                             </div>
                                     </div>
                             ))}
@@ -79,7 +80,7 @@ export function Profile(){
                                     mobile:"87518964",})
                                     }>Add address</button>         */}
 
-                                    <button onClick={()=>setIsAddAddressFlag(true)}>+Add New Address</button>
+                                    <button onClick={()=>setIsAddAddressFlag(true)} className="add-address-btn">+Add New Address</button>
                                     {isAddAddressFlag && <AddressForm setIsAddAddressFlag={setIsAddAddressFlag} />}
                         </div>
 

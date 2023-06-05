@@ -1,23 +1,23 @@
 import { useContext, useState } from "react";
-import { Modal,ModalHeader,ModalBody } from "reactstrap";
+// import { Modal,ModalHeader,ModalBody } from "reactstrap";
 import { AddressContext } from "../../contexts/AddressContext";
 import "./AddressForm.css"
 
 export function AddressForm({setIsAddAddressFlag}){
-    const [modal,setModal]= useState(true);
-    const {addAddress}= useContext(AddressContext);
+    // const [modal,setModal]= useState(true);
+    const {addAddress,addressFormData,setAddressFormData}= useContext(AddressContext);
 
     console.log("Inside addressFormComponent");
-    const [addressFormData,setAddressFormData]= useState({
-        name:"",
-        street:"",
-        city:"",
-        state:"",
-        country:"",
-        zipCode:"",
-        mobile:"",
-        }
-    );
+    // const [addressFormData,setAddressFormData]= useState({
+    //     name:"",
+    //     street:"",
+    //     city:"",
+    //     state:"",
+    //     country:"",
+    //     zipCode:"",
+    //     mobile:"",
+    //     }
+    // );
 
     function handleAddAdress(e){
         e.preventDefault();
