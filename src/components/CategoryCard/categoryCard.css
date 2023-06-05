@@ -1,0 +1,20 @@
+.category-card-div{
+   
+    font-size: 0.8rem;
+    width: 11rem;
+    height:11rem;
+    background-color: aliceblue;
+    border-radius: 8rem;
+    padding: 1rem;
+    box-shadow: 5px #a8a2a2;
+}
+.category-card-div:hover{
+    box-shadow: 5px 5px #ada8a8;
+    cursor: pointer;
+   
+}
+.category-card-div p{
+    /* max-width: 10rem; */
+    font-size: 0.85rem;
+    
+}

@@ -1,0 +1,132 @@
+.checkout-container{
+    padding: 5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    grid-gap: 9rem;
+}
+.address-card-container{
+    padding: 1rem;
+}
+.address-card-container h1{
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 0.5rem;
+}
+.carted-items-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.carted-items{
+    margin: 1rem;
+}
+.carted-item{
+
+    display: flex;
+    justify-content: space-between;
+}
+.carted-item p{
+    margin:0;
+    padding:0.5rem 0rem;
+}
+.order-price{
+    background-color: aliceblue;
+}
+.order-summary-div{
+    
+    background-color: aliceblue;
+    padding: 1rem 1rem 0rem 1rem;
+    background-color: aliceblue;
+
+}
+.order-summary-div h1{
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 0.5rem;
+    
+}
+.price-card-container-checkout
+{   
+    margin: 0rem 1rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    border-radius: 1rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: sticky;
+}
+.price-card-container-checkout h4{
+    margin:0;
+    padding:0.5rem;
+}
+.price-card-container-checkout ul{
+    display:flex;
+    text-decoration: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 0;
+    
+}
+.price-card-container-checkout li{
+    list-style: none;
+}
+.price-card-container-checkout li p{
+    margin:0;
+}
+.place-order-btn{
+    width:100%;
+    background-color: rgba(26, 141, 135);
+    height: 2rem;
+    border:none;
+    border-radius: 2rem;
+    color: rgb(248, 204, 81);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.orderPlaced-container-div{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    background-color: rgb(73, 71, 71, 0.8);
+    width: 100vw;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    align-items: center;
+}
+.orderPlaced-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 2rem;
+}
+
+.orderPlaced-container h1{
+    color:rgba(26, 141, 135);
+    
+}
+
+.orderPlaced-container h3{
+    color:rgba(26, 141, 135);
+    
+}
+.order-placed-items{
+    text-align: left;
+    font-weight: bold;
+    
+}
+.orderPlaced-address{
+    text-align: left;
+}
+.orderPlaced-address p{
+    margin:0;
+    padding:0.2rem;
+}

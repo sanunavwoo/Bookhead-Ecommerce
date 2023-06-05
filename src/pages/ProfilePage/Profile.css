@@ -1,0 +1,41 @@
+.profile-page-container{
+    padding: 5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    grid-gap: 10rem;
+    
+}
+.profile-card{
+    display: flex;
+    grid-gap: 1rem;
+}
+.address-card-container{
+    width: 20rem;
+    
+}
+.address-card{
+    border: 1px solid rgb(148, 145, 145);
+    text-align: left;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+.address-card h2{
+    margin: 0.5rem 0;
+}
+.address-card p{
+    margin:0;
+    padding:0.2rem;
+}
+.profile-horizontal-btns{
+    margin: 0.5rem 0rem;
+}
+.profile-horizontal-btns button{
+    background: none;
+    border: none;
+    background-color: red;
+    font-size: 1rem;
+}
+.address-info{
+    border-bottom: 0.5px solid rgb(75, 73, 73);
+}

@@ -1,0 +1,33 @@
+.addAddressForm-container{
+    position:fixed;
+    height: 100vh;
+    background-color: rgb(73, 71, 71, 0.8);
+    width: 100vw;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    
+}
+
+.addAddressForm{
+    display:flex;
+    flex-direction: column;
+    
+    height: fit-content;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.addAddressForm form{
+    display: flex;
+    flex-direction: column;
+}
+.addAddressForm form input{
+    margin:0.5rem auto;
+    padding:0.5rem;
+    height:1rem;
+    border-radius: 2rem;
+    border: none;
+    width: 40%;
+}
+

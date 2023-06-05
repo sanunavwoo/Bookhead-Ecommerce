@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.body-container{
+    /* background-color:rgb(217, 241, 241); */
+    background-color: #d9f1f1;
+background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+
+}
+.hero-div{
+    background-color:rgb(13, 20, 20);
+}
+
+.hero-img-div{
+    background-image: url("https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ym9va3N0b3JlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size:cover;
+    height: 32rem;
+    /* width: 80vw; */
+    padding:2rem;
+    margin: auto;
+    position:relative;
+    /* background-color: rgb(0,0,0,0.2);; */
+}
+.hero-text{
+    /* margin-left: 15rem; */
+    position: relative;
+    top:11rem;
+    left: 10rem;
+    text-align: left;
+    width: fit-content;
+}
+.hero-img-div h2{
+    font-size: 2rem;
+    color: rgb(32, 178, 170);
+    position: relative;
+    top: 6rem;
+    left: -12rem;
+}
+
+.hero-img-div h1{
+    font-size: 3rem;
+    color: rgb(37, 170, 163);
+    position: relative;
+    /* top: 7rem; */
+    /* left: -12rem; */
+    margin:0;
+    /* background-color: rgb(0,0,0,0.2); */
+}
+.hero-img-div span{
+    background-color: rgb(0,0,0,0.4)
+}
+#bookhead{
+    background-color: rgba(26, 141, 135, 0.8);
+    color:rgb(248, 204, 81);
+}
+
+.hero-text button{
+    position:relative;
+    top: 2rem;
+    height: 3rem;
+    width: 10rem;
+    background-color: rgba(26, 141, 135);
+    border-radius: 1rem;
+    color:rgb(248, 204, 81);
+    font-weight: 700;
+    font-size: large;
+    border: none;
+}
+.hero-text button:hover{
+  background-color: rgba(27, 128, 122, 0.9);
+  height: 2.9rem;
+  width: 9.9rem;
+}
+
+/* Category  */
+.category-container{
+    height:30rem;
+    padding:2rem;
+    
+
+}
+.quotes{
+    padding: 1rem;
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: rgb(34, 32, 32);
+}
+.category-div{
+    display:flex;
+    justify-content: space-around;
+    padding: 2rem 2rem 2rem 1rem;
+    text-align: center;
+    align-items: center;
+}
+.category-div h1{
+    color: rgba(26, 141, 135);
+    margin-top: 5rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+footer{
+    background-color: rgb(34, 32, 32);
+    height: 15rem;
+    
+}
+.footer-div{
+    display: flex;
+    justify-content: space-around;
+}
+footer h1{
+    padding: 2rem 1rem 0rem 1rem;
+    color:rgb(248, 204, 81);
+    margin:0;
+
+}
+footer h2{
+    color:rgba(26, 141, 135);
+    margin-bottom: 0;
+    
+}
+footer p{
+    color:aliceblue;
+}
+footer p a{
+    color:aliceblue;
+    text-decoration: none;
+}
+

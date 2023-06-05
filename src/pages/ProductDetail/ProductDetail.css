@@ -1,0 +1,116 @@
+.product-detail-containerPD{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    height: 31rem;
+    background-color: rgb(223, 237, 248);
+}
+
+.product-detail-containerPD img{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+}
+.product-card-divPD{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 35rem;
+    height: 20rem;
+    background-color: aliceblue;
+    box-shadow: rgba(134, 134, 136, 0.35) 0px 7px 17px;
+    border-radius: 0.4rem;
+    
+}
+.product-card-left{
+    position:relative;
+}
+.product-card-right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.titlePD{
+    margin-bottom: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:rgb(34, 32, 32);
+}
+.pricePD{
+
+    color: rgb(32, 178, 170);
+    font-size: 1.8rem;
+    margin: 0.3rem 0 0.2rem 0;
+}
+.authorPD{
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.authorPD span{
+    color:rgb(32, 178, 170);
+}
+.categoryNamePD{
+    margin:0;
+    font-size: 0.9rem;
+}
+.categoryNamePD span{
+    color:rgb(32, 178, 170);
+}
+.languagePD{
+    font-size: 0.9rem;
+    margin:0;
+
+}
+.languagePD span{
+    color:rgb(32, 178, 170);
+}
+.formatPD{
+    font-size: 0.9rem;
+    margin:0;
+
+}
+.formatPD span{
+    color:rgb(32, 178, 170);
+}
+.add-to-cartPD{
+    width: 100%;
+    background-color: rgba(26, 141, 135);
+    color: rgb(248, 204, 81);
+    border-radius: 0.4rem;
+    height: 2rem;
+    padding: 0.2rem;
+    font-weight: 700;
+    font-size: large;
+    border: none;
+}
+.add-to-cartPD:hover{
+    
+    background-color: rgba(26, 141, 135,0.8);
+    
+}
+.add-to-wishlistPD{
+    width: 100%;
+    background-color: rgba(26, 141, 135);
+    color: rgb(248, 204, 81);
+    border-radius: 0.4rem;
+    height: 2rem;
+    padding: 0.2rem;
+    font-weight: 700;
+    font-size: large;
+    border: none;
+   
+}
+.add-to-wishlistPD:hover{
+    
+    background-color: rgba(26, 141, 135,0.8);
+    
+}
