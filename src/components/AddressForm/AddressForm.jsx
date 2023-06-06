@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect} from "react";
 // import { Modal,ModalHeader,ModalBody } from "reactstrap";
 import { AddressContext } from "../../contexts/AddressContext";
 import "./AddressForm.css"
@@ -18,7 +18,19 @@ export function AddressForm({setIsAddAddressFlag}){
     //     mobile:"",
     //     }
     // );
-
+    useEffect(()=>{
+        setAddressFormData({
+            name:"",
+            street:"",
+            city:"",
+            state:"",
+            country:"",
+            zipCode:"",
+            mobile:"",
+            }
+        );
+    },[])
+   
     function handleAddAdress(e){
         e.preventDefault();
         console.log("From handleAddress func--", addressFormData);
