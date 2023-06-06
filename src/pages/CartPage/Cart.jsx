@@ -41,11 +41,13 @@ export function Cart(){
         <>
             <Navigation isSearchbarVisible="false" />
             <div className="cart-container">
+                
             {stateAuth.isAuth===true ?
                <> 
                 {cartItems.length>0 ?
                     <>
                             <div className="cart-item-container">
+                            <h1>My Cart</h1>
                                 {isLoading===true? 
                                     <Loader /> :
                                     <>

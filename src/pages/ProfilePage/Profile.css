@@ -50,8 +50,10 @@
 .profile-horizontal-btns .address-delete-btn{
     background: none;
     border: none;
-    background-color: red;
+    /* background-color: rgb(240, 74, 74); */
     font-size: 1rem;
+    color: rgb(240, 74, 74);
+    font-weight: bold;
 }
 .address-info{
     border-bottom: 0.5px solid rgb(75, 73, 73);

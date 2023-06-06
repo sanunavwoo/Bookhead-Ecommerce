@@ -73,7 +73,7 @@ export function AddressContextProvider({children}){
           });
     
           if (response.status === 201) {
-            //  notifySuccess('Product added to cart');
+            
             console.log("201 added to address");
           }
         } catch (e) {
@@ -106,15 +106,35 @@ export function AddressContextProvider({children}){
         }
       }
 
-    //   const editAddressHandler=async ()=>{
+      const editAddressHandler=async (editedAddressID, editedAddress)=>{
+        console.log("Edit request received--", editedAddress);
+        try{    
+            const res= await axios(`/api/user/address/${editedAddressID}`,
+            {
+                method:'POST',
+                headers: {
+                    authorization: stateAuth.token,
+                },
+                body: JSON.stringify({ address: editedAddress }),
+            });
 
-    //   }
+            if(res.status===200){
+                console.log("Address updated-- ",editedAddress);
+            }
+        }
+        catch(e){
+            console.log(e);
+        }
+        finally{
+            getAddress();
+        }
+      }
 
     useEffect(()=>{
         getAddress();
     },[]);
     return(
-        <AddressContext.Provider value={{address,getAddress,addAddress,deleteAddress,userAddress,setUserAddress,addressFormData,setAddressFormData}} >
+        <AddressContext.Provider value={{address,getAddress,addAddress,deleteAddress,editAddressHandler,userAddress,setUserAddress,addressFormData,setAddressFormData}} >
             {children}
         </AddressContext.Provider>
     );

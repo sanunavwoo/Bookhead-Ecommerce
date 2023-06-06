@@ -31,7 +31,7 @@ export function Navigation(props){
     return(
         <nav className="navbar">
             <div className="logo-div">
-                <NavLink to="/">
+                <NavLink to="/" activeClassName="selected">
                     <h2 style={{fontSize:"1.5rem"}}>bookHead</h2>
                 </NavLink>
             </div>
@@ -40,16 +40,16 @@ export function Navigation(props){
             </div>
             <ul className="navbar-list">
                 <li className="navbar-list-item">
-                    <NavLink to="/cart"><ShoppingCartIcon style={{fontSize:"1.8rem"}} />{cartItems.length>0 && <span className="quantity">{cartItems.length}</span>}</NavLink>
+                    <NavLink to="/cart" activeClassName="selected"><ShoppingCartIcon style={{fontSize:"1.8rem"}} />{cartItems.length>0 && <span className="quantity">{cartItems.length}</span>}</NavLink>
                 </li>
                 <li className="navbar-list-item">
-                    <NavLink to="/wishlist"><FavoriteIcon style={{fontSize:"1.8rem"}} />{wishlistItems.length>0 && <span className="quantity">{wishlistItems.length}</span>}</NavLink>
+                    <NavLink to="/wishlist" activeStyle={{ color: "blue" }}><FavoriteIcon style={{fontSize:"1.8rem"}} />{wishlistItems.length>0 && <span className="quantity">{wishlistItems.length}</span>}</NavLink>
                 </li>
                 <li className="navbar-list-item">
-                    {stateAuth.isAuth===true?<NavLink to="/logout"><LogoutIcon style={{fontSize:"1.8rem"}} /></NavLink> : <NavLink to="/login"><LoginIcon style={{fontSize:"1.8rem"}} /></NavLink>}
+                    {stateAuth.isAuth===true?<NavLink to="/logout" activeClassName="selected"><LogoutIcon style={{fontSize:"1.8rem"}} /></NavLink> : <NavLink to="/login" activeClassName="selected"><LoginIcon style={{fontSize:"1.8rem"}} /></NavLink>}
                 </li>
                 <li className="navbar-list-item">
-                    <NavLink to="/profile"><PersonOutlineIcon style={{fontSize:"1.8rem"}} /></NavLink>
+                    <NavLink to="/profile" activeStyle={{ color: "blue" }}><PersonOutlineIcon style={{fontSize:"1.8rem"}} /></NavLink>
                 </li>
             </ul>
 

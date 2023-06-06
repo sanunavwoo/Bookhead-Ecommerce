@@ -5,6 +5,11 @@
     grid-gap: 5rem;
     gap: 5rem;
 }
+.cart-item-container h1{
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 0.5rem;
+}
 .cart-item{
     
     margin:1rem ;
@@ -98,7 +103,7 @@
 
 
 .price-card-container{
-    margin:1rem;
+    margin: 6rem 1rem 1rem 1rem;
     background-color: aliceblue;
     display:flex;
     flex-direction: column;

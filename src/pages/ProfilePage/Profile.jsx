@@ -7,6 +7,7 @@ import { AddressContext } from "../../contexts/AddressContext";
 import { v4 as uuid } from 'uuid';
 import { AddressForm } from "../../components/AddressForm/AddressForm";
 import "./Profile.css";
+import { EditAddressForm } from "../../components/EditAddressForm/EditAddressForm";
 
 export function Profile(){
 
@@ -14,6 +15,7 @@ export function Profile(){
     const {stateAuth}= useContext(AuthContext);
 
     const [isAddAddressFlag,setIsAddAddressFlag]= useState(false);
+    const [isEditFlag,setIsEditFlag]= useState(false);
 
     const {address,getAddress,addAddress,deleteAddress,userAddress,setUserAddress}= useContext(AddressContext);
     // const [userAddress,setUserAddress]= useState([{
@@ -28,7 +30,7 @@ export function Profile(){
     useEffect(()=>{
         getAddress();
     },[]);
-    console.log("UserDetails",stateAuth.userDetails);
+    // console.log("UserDetails",stateAuth.userDetails);
 
     console.log("Address at profile--", address);
     return(
@@ -55,30 +57,12 @@ export function Profile(){
                                             </div>
                                             <div className="profile-horizontal-btns">
                                                 <button className="address-delete-btn" onClick={()=>deleteAddress(currentAddress._id)}>Delete</button>
-                                                <button>Edit</button>
+                                                {/* <button onClick={()=>setIsEditFlag(true)}>Edit</button>
+                                                {isEditFlag && <EditAddressForm setIsEditFlag={setIsEditFlag} selectedAddress={currentAddress} /> } */}
                                             </div>
                                     </div>
                             ))}
                             
-                            {/* <button onClick={()=>setUserAddress((userAddress)=>[...userAddress, 
-                                    {name:"Leo Messi",
-                                    street:"19/4 Rosario St",
-                                    city:"Rosario",
-                                    state:"Rosario",
-                                    country:"Argentina",
-                                    zipCode:"S2002",
-                                    mobile:"87518964",}]
-                                    )}>Add address</button> */}
-
-                                    {/* <button onClick={()=>addAddress( 
-                                    {name:"Leo Messi",
-                                    street:"19/4 Rosario St",
-                                    city:"Rosario",
-                                    state:"Rosario",
-                                    country:"Argentina",
-                                    zipCode:"S2002",
-                                    mobile:"87518964",})
-                                    }>Add address</button>         */}
 
                                     <button onClick={()=>setIsAddAddressFlag(true)} className="add-address-btn">+Add New Address</button>
                                     {isAddAddressFlag && <AddressForm setIsAddAddressFlag={setIsAddAddressFlag} />}
