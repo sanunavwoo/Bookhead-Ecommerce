@@ -1,29 +1,39 @@
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import { AddressContext } from "../../contexts/AddressContext";
 
-export function EditAddressForm(props){
+export function EditAddressForm({addressToBeUpdated,setIsEditFlag}){
 
-    console.log(props.selectedAddress);
-    const {editAddressHandler}= useContext(AddressContext);
+    // console.log("Prpos received--",props.selectedAddress);
+    const {editAddressHandler,address,setAddress,getAddress}= useContext(AddressContext);
+    // const addressIDtoBeChanged= props.selectedAddressID;
 
-    const [editAddressFormData,setEditAddressFormData]= useState({
-        
-            name:props.selectedAddress.name,
-            street:props.selectedAddress.street,
-            city:props.selectedAddress.city,
-            state:props.selectedAddress.state,
-            country:props.selectedAddress.country,
-            zipCode:props.selectedAddress.zipCode,
-            mobile:props.selectedAddress.mobile,
-            }
-        );
+    const initialAddress = {
+        name: '',
+        street: '',
+        city: '',
+        state: '',
+        country: '',
+        zipCode: '',
+        mobile: '',
+      };
+
+    const [editAddressFormData,setEditAddressFormData]= useState(initialAddress);
 
         function handleEditAddress(e){
             console.log("Inside handleEditAddress");
             e.preventDefault();
-            editAddressHandler(props.selectedAddress._id,editAddressFormData);
-            props.setIsEditFlag(false);
+           editAddressHandler(addressToBeUpdated._id,editAddressFormData);
+            setIsEditFlag(false);
         }
+        
+
+        useEffect(()=>{
+            getAddress();
+            if(addressToBeUpdated!==0){
+                setEditAddressFormData(()=>({...addressToBeUpdated}));
+            }
+        },[]);
+    
     return(
         <>
             <div className="addAddressForm-container">
@@ -111,7 +121,7 @@ export function EditAddressForm(props){
                                 
                              /> 
                              <button type="submit">Submit</button>
-                             <button onClick={()=>props.setIsEditFlag(false)}>Cancel</button>
+                             <button onClick={()=>setIsEditFlag(false)}>Cancel</button>
                         </form>
                 </div>   
             </div>

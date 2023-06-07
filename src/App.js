@@ -1,6 +1,6 @@
 import {Routes, Route} from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+
 import Mockman from "mockman-js"
 import {Landing} from "./pages/LandingPage/Landing";
 import {Products} from "./pages/ProductPage/Products";
