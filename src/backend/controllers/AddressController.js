@@ -145,54 +145,31 @@ export const removeAddressHandler = function (schema, request) {
  *
  * */
 
-export const updateAddressHandler = function (schema, request) {
-  const addressId = request.params.addressId;
+ export const updateAddressHandler = function (schema, request) {
   const userId = requiresAuth.call(this, request);
+
   try {
     if (!userId) {
       new Response(
         404,
         {},
         {
-          errors: ['The email you entered is not Registered. Not Found error'],
+          errors: ["The email you entered is not Registered. Not Found error"],
         }
       );
     }
-    const userAddress = schema.users.findBy({
-      _id: userId,
-    }).address;
 
-    const {
-      address: { name, street, city, state, country, zipCode, mobile },
-    } = JSON.parse(request.requestBody);
+    const addressId = request.params.addressId;
+    const { address } = JSON.parse(request.requestBody);
 
-    userAddress.forEach(address => {
-      if (address._id === addressId) {
-        address.name = name;
-        address.street = street;
-        address.city = city;
-        address.state = state;
-        address.country = country;
-        address.zipCode = zipCode;
-        address.mobile = mobile;
-        address.updatedAt = formatDate();
-      }
-    });
-    this.db.users.update(
-      {
-        _id: userId,
-      },
-      {
-        address: userAddress,
-      }
+    let userAddresses = schema.users.findBy({ _id: userId }).address;
+
+    userAddresses = userAddresses.map((item) =>
+      item._id === addressId ? address : item
     );
-    return new Response(
-      200,
-      {},
-      {
-        address: userAddress,
-      }
-    );
+
+    this.db.users.update({ _id: userId }, { address: userAddresses });
+    return new Response(201, {}, { address: userAddresses });
   } catch (error) {
     return new Response(
       500,

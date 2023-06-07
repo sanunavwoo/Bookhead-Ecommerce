@@ -107,18 +107,18 @@ export function AddressContextProvider({children}){
       }
 
       const editAddressHandler=async (editedAddressID, editedAddress)=>{
-        console.log("Edit request received--", editedAddress);
+        console.log("Edit request received--", editedAddress, "with ID",editedAddressID);
         try{    
-            const res= await axios(`/api/user/address/${editedAddressID}`,
-            {
-                method:'POST',
-                headers: {
-                    authorization: stateAuth.token,
-                },
-                body: JSON.stringify({ address: editedAddress }),
-            });
+            const res= await axios.post(`/api/user/address/${editedAddressID}`,
+             
+                { address: editedAddress },
+               { 
+                headers: { authorization: stateAuth.token,},
+                }
 
-            if(res.status===200){
+            );
+
+            if(res.status===201){
                 console.log("Address updated-- ",editedAddress);
             }
         }

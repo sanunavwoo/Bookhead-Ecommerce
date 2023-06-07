@@ -16,8 +16,10 @@ export function Profile(){
 
     const [isAddAddressFlag,setIsAddAddressFlag]= useState(false);
     const [isEditFlag,setIsEditFlag]= useState(false);
+    const [addressToBeUpdated,setAddressToBeUpdated]= useState(0);
 
     const {address,getAddress,addAddress,deleteAddress,userAddress,setUserAddress}= useContext(AddressContext);
+
     // const [userAddress,setUserAddress]= useState([{
     //     name:"Enzo",
     //     street:"Chelsea",
@@ -57,8 +59,11 @@ export function Profile(){
                                             </div>
                                             <div className="profile-horizontal-btns">
                                                 <button className="address-delete-btn" onClick={()=>deleteAddress(currentAddress._id)}>Delete</button>
-                                                {/* <button onClick={()=>setIsEditFlag(true)}>Edit</button>
-                                                {isEditFlag && <EditAddressForm setIsEditFlag={setIsEditFlag} selectedAddress={currentAddress} /> } */}
+                                                <button className="address-edit-btn" onClick={()=>{
+                                                    setIsEditFlag(true);
+                                                    setAddressToBeUpdated(currentAddress);
+                                                    }}>Edit</button>
+                                                {isEditFlag && <EditAddressForm setIsEditFlag={setIsEditFlag} addressToBeUpdated={addressToBeUpdated} /> }
                                             </div>
                                     </div>
                             ))}

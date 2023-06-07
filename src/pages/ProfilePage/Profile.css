@@ -47,10 +47,14 @@
 .profile-horizontal-btns{
     margin: 0.5rem 0rem;
 }
-.profile-horizontal-btns .address-delete-btn{
+.profile-horizontal-btns {
+   display:flex;
+   justify-content: space-between;
+}
+.address-delete-btn{
     background: none;
     border: none;
-    /* background-color: rgb(240, 74, 74); */
+    width: 50%;
     font-size: 1rem;
     color: rgb(240, 74, 74);
     font-weight: bold;
@@ -69,4 +73,13 @@
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+.address-edit-btn{
+    background: none;
+    border: none;
+    width: 50%;
+    font-size: 1rem;
+    color: rgba(26, 141, 135);
+    font-weight: bold;
 }
